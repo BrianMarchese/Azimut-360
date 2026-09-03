@@ -10,3 +10,9 @@
     --color-secondary: #e4a62e;
     --color-neutral: #F8F9FA;
 }
+
+
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(8,31,38,.94) 0%, rgba(11,35,42,.77) 39%, rgba(10,27,32,.18) 69%, rgba(4,12,15,.23) 100%),
+              linear-gradient(0deg, rgba(8,23,27,.7) 0%, transparent 46%);
+}
