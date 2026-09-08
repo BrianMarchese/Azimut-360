@@ -1,9 +1,8 @@
 import { FiArrowRight, FiShield, FiTarget, FiCheck, FiAward, FiFileText, FiClock, FiMapPin } from 'react-icons/fi';
-import { LuAward, LuFileCheck, LuClock, LuMapPin } from 'react-icons/lu';
 
 export const Hero = () => {
   return (
-      <div className="relative">
+      <div className="relative font-body">
         <section id="inicio" className="relative pt-32 pb-20 sm:pb-24 lg:pb-40">
           {/* Imagen de fondo y degradado */}
           <img src="/hero-img.png" alt="imagen hero" className="absolute inset-0 h-full w-full object-cover" />
@@ -15,7 +14,7 @@ export const Hero = () => {
                 Agrimensura de precisión
               </span>
 
-              <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.18] text-white">
+              <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.18] text-white font-heading">
                 Precisión y confianza en servicios de agrimensura
               </h1>
 
