@@ -8,8 +8,8 @@ export const Navbar = () => {
     { name: 'Inicio', href: '#inicio' },
     { name: 'Servicios', href: '#servicios' },
     { name: 'Nosotros', href: '#nosotros' },
-    { name: 'Proyectos', href: '#proyectos' },
     { name: 'Proceso', href: '#proceso' },
+    { name: 'Proyectos', href: '#proyectos' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contacto', href: '#contacto' },
   ];

@@ -30,7 +30,7 @@ export const About = () => {
                 <img src="./nosotros.png" alt="imagen provincia santa fe" className="w-125 min-h-78 rounded-xl object-cover shadow-lg bg-slate-700 " />
                 <div className="relative py-4 lg:px-4 md:px-5">
                     <p className="text-secondary uppercase tracking-[.12em] font-bold font-heading">Sobre nosotros</p>
-                    <h2 className="font-extrabold text-2xl">Experiencia, tecnología y compromiso</h2>
+                    <p className="font-extrabold text-2xl">Experiencia, tecnología y compromiso</p>
                     <p className="relative mt-4 max-w-3xl text-md text-slate-600">En Azimut 360 brindamos servicios de agrimensura con un enfoque profesional, ético y orientado a resultados. Combinamos experiencia en campo con tecnología de precisión para garantizar información confiable que respalda cada decisión.</p>
                     <div className="relative mt-6 grid gap-x-8 gap-y-3 sm:grid-cols-2">
                         {
