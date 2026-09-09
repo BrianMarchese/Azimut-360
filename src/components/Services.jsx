@@ -17,7 +17,7 @@ const servicios = [
 export const Services = () => {
     return (
         <section id="servicios" className="py-20 px-5 font-body ">
-            <div className="container mx-auto max-w-6xl">
+            <div className="container mx-auto md:px-7 px-2 ">
                 <div className="font-heading">
                     <p className="text-secondary uppercase tracking-[.12em]">Servicios</p>
                     <h2 className="text-2xl font-extrabold max-w-sm">Soluciones integrales en agrimensura</h2>
@@ -26,7 +26,7 @@ export const Services = () => {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-7">
                     {
                         servicios.map(({ icon: Icon, title, text }) => (
-                            <div className="flex min-h-38.5 rounded-xl border border-slate-200/90 gap-4 p-5 transition hover:-translate-y-1 hover:border-secondary/50 hover:shadow-lg">
+                            <div key={title} className="flex min-h-38.5 rounded-xl border border-slate-200/90 gap-4 p-5 transition hover:-translate-y-1 hover:border-secondary/50 hover:shadow-lg">
                                 <Icon className="text-3xl shrink-0 text-secondary" />
                                 <div>
                                     <p className="mb-2 font-extrabold">{ title }</p>

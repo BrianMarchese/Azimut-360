@@ -2,6 +2,7 @@
 
 @import "tailwindcss";
 
+
 @theme {
     --font-heading: "Montserrat", sans-serif;
     --font-body: "Inter", sans-serif;
@@ -9,6 +10,10 @@
     --color-primary: #FCCB88;
     --color-secondary: #e4a62e;
     --color-neutral: #F8F9FA;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
 }
 
 

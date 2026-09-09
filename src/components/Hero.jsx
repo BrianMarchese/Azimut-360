@@ -7,7 +7,7 @@ export const Hero = () => {
           {/* Imagen de fondo y degradado */}
           <img src="/hero-img.png" alt="imagen hero" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 hero-overlay" />
-          <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="relative z-10  container mx-auto px-5">
             <div className="max-w-2xl text-white">
               
               <span className="inline-block rounded-full border border-secondary/40 bg-secondary/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[.15em] text-primary">
@@ -18,7 +18,7 @@ export const Hero = () => {
                 Precisión y confianza en servicios de agrimensura
               </h1>
 
-              <p className="mt-4 text-sm sm:text-base text-slate-200 max-w-xl">
+              <p className="mt-4 text-sm sm:text-base text-slate-200">
                 Soluciones profesionales en mensuras, relevamientos y asesoramiento para proyectos que requieren exactitud, cumplimiento y tranquilidad.
               </p>
 
@@ -57,7 +57,7 @@ export const Hero = () => {
         </section>
 
         {/* barra flotante */ }
-        <div className='relative z-20 max-w-6xl mx-auto -mt-12 sm:-mt-14 px-8 md:px-0'>
+        <div className='relative z-20 max-w-6xl mx-auto -mt-12 sm:-mt-14 px-5 md:px-5'>
           <div className='grid sm:grid-cols-2 lg:grid-cols-4 overflow-hidden rounded-xl bg-white shadow-xl border border-slate-100 '>
               <div className='flex flex-col items-center justify-center gap-3 px-5 py-6'>
                   <FiAward className='text-4xl text-primary'/>
