@@ -17,7 +17,7 @@ const servicios = [
 export const Services = () => {
     return (
         <section id="servicios" className="py-20 px-5 font-body ">
-            <div className="container mx-auto md:px-7 px-2 ">
+            <div className="container mx-auto md:px-6 px-2 ">
                 <div className="font-heading">
                     <p className="text-secondary uppercase tracking-[.12em]">Servicios</p>
                     <h2 className="text-2xl font-extrabold max-w-sm">Soluciones integrales en agrimensura</h2>
