@@ -12,8 +12,12 @@
     --color-neutral: #F8F9FA;
 }
 
+/* max-w-500*/
+
 @layer base {
+  .container-site { @apply mx-auto w-full max-w-500 px-5 sm:px-8 lg:px-10; }
   html { scroll-behavior: smooth; }
+
 }
 
 

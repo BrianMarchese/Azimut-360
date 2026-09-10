@@ -16,8 +16,8 @@ const servicios = [
 
 export const Services = () => {
     return (
-        <section id="servicios" className="py-20 px-5 font-body ">
-            <div className="container mx-auto md:px-6 px-2 ">
+        <section id="servicios" className="py-20 font-body ">
+            <div className="container-site">
                 <div className="font-heading">
                     <p className="text-secondary uppercase tracking-[.12em] font-bold">Servicios</p>
                     <h2 className="text-2xl font-extrabold max-w-sm">Soluciones integrales en agrimensura</h2>
@@ -30,7 +30,7 @@ export const Services = () => {
                                 <Icon className="text-3xl shrink-0 text-secondary" />
                                 <div>
                                     <p className="mb-2 font-extrabold">{ title }</p>
-                                    <p className="text-sm">{ text }</p>
+                                    <p className="text-sm text-slate-600">{ text }</p>
                                 </div>
                             </div>
                         ))

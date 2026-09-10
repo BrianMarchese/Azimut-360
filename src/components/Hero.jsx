@@ -3,11 +3,11 @@ import { FiArrowRight, FiShield, FiTarget, FiCheck, FiAward, FiFileText, FiClock
 export const Hero = () => {
   return (
       <div className="relative font-body">
-        <section id="inicio" className="relative pt-32 pb-20 sm:pb-24 lg:pb-40">
+        <section id="inicio" className="relative pt-32 pb-20 sm:pb-24 lg:pb-40 lg:px-5">
           {/* Imagen de fondo y degradado */}
           <img src="/hero-img.png" alt="imagen hero" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 hero-overlay" />
-          <div className="relative z-10  container mx-auto px-5">
+          <div className="relative z-10 container-site px-5">
             <div className="max-w-2xl text-white">
               
               <span className="inline-block rounded-full border border-secondary/40 bg-secondary/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[.15em] text-primary">
@@ -57,7 +57,7 @@ export const Hero = () => {
         </section>
 
         {/* barra flotante */ }
-        <div className='relative z-20 max-w-6xl mx-auto -mt-12 sm:-mt-14 px-5 md:px-5'>
+        <div className='relative z-20 max-w-6xl -mt-12 sm:-mt-14 container-site'>
           <div className='grid sm:grid-cols-2 lg:grid-cols-4 overflow-hidden rounded-xl bg-white shadow-xl border border-slate-100 '>
               <div className='flex flex-col items-center justify-center gap-3 px-5 py-6'>
                   <FiAward className='text-4xl text-primary'/>
