@@ -11,7 +11,7 @@ export const Proceso = () => {
                    <p className="text-2xl font-extrabold max-w-sm">Un proceso claro y eficiente</p>
                 </div>
                 {/* GRID CONTAINER */ }
-                <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4 mt-7">
                     <article className="pt-2 font-body">
                         <div className="mb-4 flex items-center gap-3">
                             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-sm font-extrabold text-white ">1</span>

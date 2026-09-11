@@ -1,7 +1,80 @@
+import { useState } from "react";
+import { FiChevronDown } from "react-icons/fi";
+
+const faqsData = [
+  {
+    id: 1,
+    question: "¿Qué es una mensura y para qué sirve?",
+    answer: "Es el trabajo técnico que determina, mide y representa legalmente los límites, dimensiones y superficie de un inmueble."
+  },
+  {
+    id: 2,
+    question: "¿Cuánto tiempo tarda un trabajo de mensura?",
+    answer: "Depende de la complejidad y del organismo interviniente. Luego de una primera consulta brindamos un plazo estimado concreto."
+  },
+  {
+    id: 3,
+    question: "¿Necesito estar presente durante el relevamiento?",
+    answer: "No siempre. Podemos coordinar el acceso y mantenerte informado durante todo el proceso."
+  },
+  {
+    id: 4,
+    question: "¿Qué documentación necesito para iniciar una mensura?",
+    answer: "Por lo general se requiere el título de propiedad inscripto, antecedentes catastrales y DNI del titular. Nosotros nos encargamos de las gestiones."
+  },
+  {
+    id: 5,
+    question: "¿Cuánto tiempo demora la entrega de un plano?",
+    answer: "Un trabajo estándar suele completarse entre 10 y 20 días hábiles, incluyendo los tiempos de visado en el catastro local."
+  },
+  {
+    id: 6,
+    question: "¿Qué información necesito para solicitar un servicio?",
+    answer: "La ubicación del inmueble, una breve descripción del objetivo y, si tenés, antecedentes o documentación catastral."
+  }
+];
+
 export const FAQ = () => {
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggleFaq = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    }
+
     return (
-        <section>
-             
-        </section>
+        <section id="faq" className="py-20">
+            <div className="container-site">
+                {/* Encabezado */}
+                <div className="font-heading">
+                    <p className="text-secondary uppercase tracking-[.12em] font-bold">Preguntas frecuentes</p>
+                    <h2 className="text-2xl font-extrabold max-w-sm">Resolvemos tus dudas</h2>
+                </div>
+
+                {/* Lista */}
+                <div className="space-y-3 mt-7 ">
+                    {faqsData.map((faq, index) => {
+                        const isOpen = openIndex === index;
+                        
+                        return (
+                            <div key={faq.id} className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                                {/* Botón pregunta */}
+                                <button onClick={() => toggleFaq(index)} className="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors">
+                                    <span>{faq.question}</span>
+                                    <FiChevronDown className={`w-5 h-5 text-secondary transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+                                </button>
+
+                                {/* Respuesta */}
+                                {isOpen && (
+                                    <div className="px-4 pb-4 pt-1 text-slate-600 text-[15px] border-t border-slate-100">
+                                        {faq.answer}
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
+
+            </div>
+            </section>
     )
 }

@@ -57,7 +57,7 @@ export const Hero = () => {
         </section>
 
         {/* barra flotante */ }
-        <div className='relative z-20 max-w-6xl -mt-12 sm:-mt-14 container-site'>
+        <div className='relative z-20 max-w-7xl -mt-12 sm:-mt-14 container-site'>
           <div className='grid sm:grid-cols-2 lg:grid-cols-4 overflow-hidden rounded-xl bg-white shadow-xl border border-slate-100 '>
               <div className='flex flex-col items-center justify-center gap-3 px-5 py-6'>
                   <FiAward className='text-4xl text-primary'/>
