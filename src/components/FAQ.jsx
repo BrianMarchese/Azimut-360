@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FiChevronDown } from "react-icons/fi";
+import { FiArrowRight, FiChevronDown } from "react-icons/fi";
+import { LuDraftingCompass } from "react-icons/lu";
 
 const faqsData = [
   {
@@ -75,6 +76,22 @@ export const FAQ = () => {
                 </div>
 
             </div>
-            </section>
+
+            <div className="py-20">
+                <div className="container-site flex flex-col items-center justify-between gap-5 md:flex-row bg-secondary py-6 text-white">
+                    <div className="flex items-center gap-5">
+                        <LuDraftingCompass className="text-6xl" />
+                        <div>
+                            <p className="text-2xl font-extrabold leading-[1.1] font-heading">¿Tenés un proyecto?<br />Estamos listos para ayudarte</p>
+                            <p className="mt-2 text-sm font-body">Contanos tu idea y te enviaremos una propuesta a medida.</p>
+                        </div>
+                    </div>
+                    <a href="#contacto" className="inline-flex items-center gap-3 rounded-md bg-white px-6 py-3 text-xs font-extrabold text-secondary shadow-lg font-body">
+                        Solicitar presupuesto ahora
+                        <FiArrowRight />
+                    </a>
+                </div>
+            </div>
+        </section>
     )
 }

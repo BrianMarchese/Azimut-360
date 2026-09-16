@@ -17,6 +17,7 @@
 @layer base {
   .container-site { @apply mx-auto w-full max-w-500 px-5 sm:px-8 lg:px-10; }
   html { scroll-behavior: smooth; }
+  .field { @apply w-full rounded-md border border-slate-200 bg-white px-3 py-3 text-sm text-black outline-none transition placeholder:text-slate-400 focus:border-primary focus:ring-2 focus:ring-secondary/10; }
 
 }
 
