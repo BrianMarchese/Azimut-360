@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FiArrowRight, FiChevronDown } from "react-icons/fi";
 import { LuDraftingCompass } from "react-icons/lu";
+import { motion } from "framer-motion"
 
 const faqsData = [
   {
@@ -44,7 +45,7 @@ export const FAQ = () => {
 
     return (
         <section id="faq" className="py-20">
-            <div className="container-site">
+            <motion.div className="container-site" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, ease: "easeOut" }}>
                 {/* Encabezado */}
                 <div className="font-heading">
                     <p className="text-secondary uppercase tracking-[.12em] font-bold">Preguntas frecuentes</p>
@@ -75,7 +76,7 @@ export const FAQ = () => {
                     })}
                 </div>
 
-            </div>
+            </motion.div>
 
             <div className="py-20">
                 <div className="container-site flex flex-col items-center justify-between gap-5 md:flex-row bg-secondary py-6 text-white">

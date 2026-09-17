@@ -1,4 +1,5 @@
 import { FiArrowRight, FiClock, FiMail, FiMapPin, FiMessageCircle, FiPhone } from "react-icons/fi"
+import { motion } from "framer-motion"
 
 const services = [
   { title: 'Mensura' },
@@ -13,7 +14,7 @@ const services = [
 
 export const Contact = () => {
     return (
-        <section id="contacto">
+        <motion.section id="contacto" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }}>
             <div className="container-site grid md:grid-cols-2 gap-8 pb-20">
                 <div className="font-heading">
                     <p className="text-secondary uppercase tracking-[.12em] font-bold">Servicios</p>
@@ -90,6 +91,6 @@ export const Contact = () => {
                 </form>
 
             </div>
-        </section>
+        </motion.section>
     )
 }

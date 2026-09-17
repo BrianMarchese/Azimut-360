@@ -1,5 +1,5 @@
 import { FiArrowRight, FiShield, FiTarget, FiCheck, FiAward, FiFileText, FiClock, FiMapPin } from 'react-icons/fi';
-
+import { motion } from "framer-motion"
 export const Hero = () => {
   return (
       <div className="relative font-body">
@@ -8,7 +8,7 @@ export const Hero = () => {
           <img src="/hero-img.png" alt="imagen hero" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 hero-overlay" />
           <div className="relative z-10 container-site px-5">
-            <div className="max-w-2xl text-white">
+            <motion.div className="max-w-2xl text-white" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}>
               
               <span className="inline-block rounded-full border border-secondary/40 bg-secondary/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[.15em] text-primary">
                 Agrimensura de precisión
@@ -30,58 +30,58 @@ export const Hero = () => {
 
               {/* insignias */}
               <div className="mt-8 grid md:grid-cols-3 grid-cols-1 gap-4 pt-4 border-t border-white/15">
-                <div className="flex items-center gap-3">
+                <motion.div className="flex items-center gap-3 hover:cursor-pointer" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
                   <span className="grid h-9 w-9 items-center justify-center rounded-full border border-secondary/60 text-primary">
                     <FiShield />
                   </span>
                   <span className="text-xs sm:text-sm text-slate-200 font-medium">Profesionales Matriculados</span>
-                </div>
+                </motion.div>
 
-                <div className="flex items-center gap-3">
+                <motion.div className="flex items-center gap-3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.35 }}>
                   <span className="grid h-9 md:w-11 w-9 items-center justify-center rounded-full border border-secondary/60 text-primary">
                     <FiTarget />
                   </span>
                   <span className="text-xs sm:text-sm text-slate-200 font-medium">Tecnología de última generación</span>
-                </div>
+                </motion.div>
 
-                <div className="flex items-center gap-3">
+                <motion.div className="flex items-center gap-3" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
                   <span className="grid h-9 w-9 items-center justify-center rounded-full border border-secondary/60 text-primary">
                     <FiCheck />
                   </span>
                   <span className="text-xs sm:text-sm text-slate-200 font-medium">Compromiso con la precisión</span>
-                </div>
+                </motion.div>
               </div>
 
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* barra flotante */ }
         <div className='relative z-20 max-w-7xl -mt-12 sm:-mt-14 container-site'>
           <div className='grid sm:grid-cols-2 lg:grid-cols-4 overflow-hidden rounded-xl bg-white shadow-xl border border-slate-100 '>
-              <div className='flex flex-col items-center justify-center gap-3 px-5 py-6'>
+              <motion.div className='flex flex-col items-center justify-center gap-3 px-5 py-6' initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
                   <FiAward className='text-4xl text-primary'/>
                   <div className='text-secondary text-2xl font-extrabold'>+10</div>
                   <div className='text-sm font-semibold text-slate-600'>Años de experiencia</div>
-              </div>
+              </motion.div>
 
-              <div className='flex flex-col items-center justify-center gap-3 px-5 py-6 border-t border-slate-200 sm:border-l sm:border-t-0'>
+              <motion.div className='flex flex-col items-center justify-center gap-3 px-5 py-6 border-t border-slate-200 sm:border-l sm:border-t-0' initial={{ opacity: 0, y: 30 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
                   <FiFileText className='text-4xl text-primary'/>
                   <div className='text-secondary text-2xl font-extrabold'>+100</div>
                   <div className='text-sm font-semibold text-slate-600'>Proyectos realizados</div>
-              </div>
+              </motion.div>
 
-              <div className='flex flex-col items-center justify-center gap-3 px-5 py-6 border-t border-slate-200 sm:border-l sm:border-t-0 '>
+              <motion.div className='flex flex-col items-center justify-center gap-3 px-5 py-6 border-t border-slate-200 sm:border-l sm:border-t-0 ' initial={{ opacity: 0, y: 30 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
                   <FiClock className='text-4xl text-primary'/>
                   <div className='text-secondary text-xl font-extrabold'>24 hs</div>
                   <div className='text-sm font-semibold text-slate-600'>Tiempo de respuesta</div>
-              </div>
+              </motion.div>
               
-              <div className='flex flex-col items-center justify-center gap-3 px-5 py-6 border-t border-slate-200 sm:border-l sm:border-t-0'>
+              <motion.div className='flex flex-col items-center justify-center gap-3 px-5 py-6 border-t border-slate-200 sm:border-l sm:border-t-0' initial={{ opacity: 0, y: 30 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }}>
                   <FiMapPin className='text-4xl text-primary'/>
                   <div className='text-secondary text-2xl font-extrabold'>+20</div>
                   <div className='text-sm font-semibold text-slate-600'>Zonas de cobertura</div>
-              </div>
+              </motion.div>
           </div>
       </div>
     </div>
