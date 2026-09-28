@@ -30,7 +30,7 @@ export const Contact = () => {
     const handleChange = (e) => {
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value // se modifica solo el campo que esta escribiendo el usuario
         })
     }
 

@@ -79,7 +79,7 @@ export const FAQ = () => {
             </motion.div>
 
             <div className="py-20">
-                <div className="container-site flex flex-col items-center justify-between gap-5 md:flex-row bg-secondary py-6 text-white">
+                <div className="container-site flex flex-col items-center justify-between gap-5 md:flex-row bg-secondary py-6 text-white lg:rounded-md">
                     <div className="flex items-center gap-5">
                         <LuDraftingCompass className="text-6xl" />
                         <div>
