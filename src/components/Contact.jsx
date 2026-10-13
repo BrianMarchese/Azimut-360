@@ -1,7 +1,9 @@
-import { FiArrowRight, FiClock, FiMail, FiMapPin, FiMessageCircle, FiPhone } from "react-icons/fi"
+import { FiArrowRight, FiClock, FiMail, FiMapPin, FiPhone } from "react-icons/fi"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import emailjs from '@emailjs/browser';
+import { supabase } from '../services/supabase';
+import { FaWhatsapp } from "react-icons/fa";
 
 const services = [
   { title: 'Mensura' },
@@ -57,7 +59,21 @@ export const Contact = () => {
         try {
             await emailjs.send(serviceID, templateID, templateParams, publicKey)
 
-            /* ACA VA LOGICA SUPABASE */
+            /* SUPABASE */
+            const { error: dbError } = await supabase
+            .from('consultas')
+            .insert([
+                {
+                    nombre: formData.name,
+                    email: formData.email,
+                    telefono: formData.phone,
+                    servicio: formData.service,
+                    mensaje: formData.message,
+                    estado: 'pendiente'
+                }
+            ]);
+
+            if (dbError) throw dbError;
 
             setStatus({
                 success:true,
@@ -87,7 +103,7 @@ export const Contact = () => {
                     {/* ICONOS CON DATOS */ }
                     <div className="mt-7 grid md:grid-cols-2 gap-5">
                         <div className="flex gap-3">
-                            <FiMessageCircle className="text-xl text-secondary" />
+                            <FaWhatsapp className="text-xl text-secondary" />
                             <div>
                                 <p className="font-bold font-heading">WhatsApp</p>
                                 <p className="mt-1 leading-4 text-slate-600">+54 341 123 4567</p>

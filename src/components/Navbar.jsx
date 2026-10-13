@@ -5,13 +5,13 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Inicio', href: '#inicio' },
-    { name: 'Servicios', href: '#servicios' },
-    { name: 'Nosotros', href: '#nosotros' },
-    { name: 'Proceso', href: '#proceso' },
-    { name: 'Proyectos', href: '#proyectos' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Contacto', href: '#contacto' },
+    { name: 'Inicio', href: '/#inicio' },
+    { name: 'Servicios', href: '/#servicios' },
+    { name: 'Nosotros', href: '/#nosotros' },
+    { name: 'Proceso', href: '/#proceso' },
+    { name: 'Proyectos', href: '/#proyectos' },
+    { name: 'FAQ', href: '/#faq' },
+    { name: 'Contacto', href: '/#contacto' },
   ];
 
   return (
@@ -20,7 +20,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between">
           
           {/* Logo */}
-          <a href="#inicio" className="flex items-center gap-3 group">
+          <a href="/#inicio" className="flex items-center gap-3 group">
             <div className="transition-transform duration-300 group-hover:scale-110">
               <img className="h-10 w-10 sm:h-12 sm:w-12 object-contain" src="/logo.png" alt="logo azimut 360" />
             </div>
@@ -45,7 +45,7 @@ export const Navbar = () => {
 
           {/* Botón Desktop  */}
           <div className="hidden lg:block ">
-            <a href="#contacto" className="flex items-center gap-2 bg-primary hover:bg-secondary text-slate-950 text-sm font-semibold px-4 py-2.5 rounded-lg transition-all duration-400">
+            <a href="/#contacto" className="flex items-center gap-2 bg-primary hover:bg-secondary text-slate-950 text-sm font-semibold px-4 py-2.5 rounded-lg transition-all duration-400">
               Solicitar presupuesto
               <FiArrowRight className="text-base" />
             </a>

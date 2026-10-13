@@ -7,7 +7,7 @@ export const Footer = () => {
             <div className="container-site grid gap-10 md:grid-cols-2 lg:grid-cols-4">
                 {/* LOGO */}
                 <div>
-                    <a href="#inicio" className="flex items-center gap-3 group">
+                    <a href="/#inicio" className="flex items-center gap-3 group">
                         <div className="transition-transform duration-300 group-hover:scale-110">
                         <img className="h-10 w-10 sm:h-12 sm:w-12 object-contain" src="/logo.png" alt="logo azimut 360" />
                         </div>
@@ -33,22 +33,22 @@ export const Footer = () => {
                     <div>
                         <h3 className="text-sm font-extrabold font-heading">Enlaces rápidos</h3>
                         <div className="mt-4 space-y-2 font-body">
-                            <a href="#inicio" className="block text-[12px] text-white/60 transition hover:text-secondary">
+                            <a href="/#inicio" className="block text-[12px] text-white/60 transition hover:text-secondary">
                                 Inicio
                             </a>
-                            <a href="#servicios" className="block text-[12px] text-white/60 transition hover:text-secondary">
+                            <a href="/#servicios" className="block text-[12px] text-white/60 transition hover:text-secondary">
                                 Servicios
                             </a>
-                            <a href="#nosotros" className="block text-[12px] text-white/60 transition hover:text-secondary">
+                            <a href="/#nosotros" className="block text-[12px] text-white/60 transition hover:text-secondary">
                                 Nosotros
                             </a>
-                            <a href="#proceso" className="block text-[12px] text-white/60 transition hover:text-secondary">
+                            <a href="/#proceso" className="block text-[12px] text-white/60 transition hover:text-secondary">
                                 Proceso
                             </a>
-                            <a href="#proyectos" className="block text-[12px] text-white/60 transition hover:text-secondary">
+                            <a href="/#proyectos" className="block text-[12px] text-white/60 transition hover:text-secondary">
                                 Proyectos
                             </a>
-                            <a href="#faq" className="block text-[12px] text-white/60 transition hover:text-secondary">
+                            <a href="/#faq" className="block text-[12px] text-white/60 transition hover:text-secondary">
                                 FAQ
                             </a>
                         </div>
