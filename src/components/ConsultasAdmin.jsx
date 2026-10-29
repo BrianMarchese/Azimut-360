@@ -46,7 +46,7 @@ export const ConsultasAdmin = () => {
         </div>
 
     return (
-        <div className=" font-body min-h-screen">
+        <div className=" min-h-screen">
             {/* encabezado */}
             <div className="mb-8 font-heading mt-10">
                 <h1 className="text-2xl sm:text-3xl font-bold font-heading text-secondary">
@@ -90,12 +90,12 @@ export const ConsultasAdmin = () => {
                             </div>
                         </div>
 
-                        {/* 2. caja de mensaje  */}
+                        {/* caja de mensaje  */}
                         <div className="my-3 flex-1 flex flex-col bg-slate-100 p-3.5 rounded-xl border border-slate-200 text-sm overflow-hidden">
                             <p className="text-slate-800 mb-1.5 font-medium">
                                 <span className="font-bold text-slate-800">Servicio:</span> {c.servicio}
                             </p>
-                            <div className="overflow-y-auto pr-1 text-slate-600 leading-relaxed whitespace-normal flex-1">
+                            <div className="overflow-y-auto pr-1 text-slate-600 leading-relaxed whitespace-normal flex-1 font-body ">
                                 {c.mensaje}
                             </div>
                         </div>
