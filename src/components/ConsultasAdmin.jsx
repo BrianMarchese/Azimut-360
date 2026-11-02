@@ -1,6 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../services/supabase';
 import { FiRefreshCw } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
+
+const generarLinkWhatsApp = (telefono, nombre, servicio) => {
+    if (!telefono) return ''
+
+    // elimina espacios, guiones y caracteres no numericos
+    let cleanPhone = telefono.replace(/\D/g, '')
+
+    // si tiene 10 digitos antepone codigo de pais (54) y movil (9)
+    if (cleanPhone.length === 10) {
+        cleanPhone = `549${cleanPhone}`
+    }
+
+    const mensaje = `Hola ${nombre}, nos contactamos desde el Estudio de Agrimensura Azimut360 por tu consulta sobre el servicio de ${servicio}.`
+    return `https://wa.me/${cleanPhone}?text=${encodeURIComponent(mensaje)}`
+}
 
 export const ConsultasAdmin = () => {
     const [consultas, setConsultas] = useState([]);
@@ -101,7 +117,19 @@ export const ConsultasAdmin = () => {
                         </div>
 
                         {/* Botón de acción*/}
-                        <div className="flex justify-end pt-1">
+                        <div className="flex items-center justify-between pt-2 border-t border-slate-100 gap-2">
+
+                                {c.telefono ? (
+                                    <a href={generarLinkWhatsApp(c.telefono, c.nombre, c.servicio)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold py-2.5 px-3 rounded-md transition-colors duration-200 shadow-sm">
+                                        <FaWhatsapp className="w-4 h-4" />
+                                        <span>WhatsApp</span>
+                                    </a>
+                                    ) : (
+                                    <span className="text-sm text-slate-400 italic pl-1">
+                                        Sin teléfono
+                                    </span>
+                                )}
+
                             <button onClick={() => toggleEstado(c.id, c.estado)} className="text-xs sm:text-sm font-semibold hover:underline cursor-pointer bg-primary hover:bg-secondary transition-all duration-300 rounded-md p-3">
                                 Marcar como {c.estado === 'pendiente' ? 'contestada' : 'pendiente'}
                             </button>
