@@ -10,6 +10,7 @@ Aplicación web integral diseñada para un estudio profesional de agrimensura. C
 * **Estilos:** Tailwind CSS
 * **Enrutamiento:** React Router
 * **Backend, Base de Datos y Auth:** Supabase (PostgreSQL, Supabase Auth, Row Level Security)
+* **Notificaciones por Email:** EmailJS
 * **Iconografía:** React Icons
 
 ---
@@ -18,8 +19,10 @@ Aplicación web integral diseñada para un estudio profesional de agrimensura. C
 
 ### 🌐 Portal Público
 * **Diseño orientado a conversión:** Secciones estructuradas para servicios catastrales, mensuras, subdivisiones y estado parcelario.
+* **Formulario de contacto con doble vía:**
+  * Almacenamiento directo de la consulta en Supabase para su seguimiento desde el panel.
+  * Envío automático e instantáneo de notificación por correo electrónico al profesional mediante **EmailJS** con el detalle completo del contacto (nombre, email, teléfono, servicio y mensaje).
 * **Testimonios:** Muestra las reseñas con avatares generados automáticamente.
-* **Formulario de contacto:** Captación directa de consultas vinculada a la base de datos.
 * **Sección de Preguntas Frecuentes (FAQs):** Resolución previa de objeciones y requerimientos técnicos habituales.
 
 ### 🔒 Panel de Administración
