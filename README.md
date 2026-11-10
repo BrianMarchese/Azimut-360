@@ -1,16 +1,42 @@
-# React + Vite
+# Estudio de Agrimensura Azimut360 — Plataforma Web y Panel de Gestión
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web integral diseñada para un estudio profesional de agrimensura. Combina una plataforma pública moderna orientada a la conversión y captación de clientes con un panel administrativo privado para gestionar consultas entrantes y testimonios en tiempo real.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologías
 
-## React Compiler
+* **Frontend:** React, Vite
+* **Estilos:** Tailwind CSS
+* **Enrutamiento:** React Router
+* **Backend, Base de Datos y Auth:** Supabase (PostgreSQL, Supabase Auth, Row Level Security)
+* **Iconografía:** React Icons
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Características Principales
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🌐 Portal Público
+* **Diseño orientado a conversión:** Secciones estructuradas para servicios catastrales, mensuras, subdivisiones y estado parcelario.
+* **Testimonios:** Muestra las reseñas con avatares generados automáticamente.
+* **Formulario de contacto:** Captación directa de consultas vinculada a la base de datos.
+* **Sección de Preguntas Frecuentes (FAQs):** Resolución previa de objeciones y requerimientos técnicos habituales.
+
+### 🔒 Panel de Administración
+* **Autenticación privada:** Acceso restringido por credenciales gestionadas mediante Supabase Auth.
+* **Gestión de Consultas:**
+  * Tarjetas con visualizador de mensajes extensos con scroll interno.
+  * Botón de contacto directo por **WhatsApp** con formateo automático de número (+54 9) y mensaje personalizado prefijado según el servicio consultado.
+  * Alternador de estados en tiempo real (`pendiente` / `contestada`).
+* **Gestión de Testimonios / Reseñas:**
+  * CRUD completo (creación, edición, alternado de visibilidad pública y eliminación definitiva).
+  * Control de publicación mediante switch de visibilidad (`visible: true/false`).
+  * Actualización optimista de estado en React para interacción fluida sin recargas de página.
+
+---
+
+## 🛡️ Seguridad y Base de Datos (Supabase RLS)
+
+El proyecto implementa **Row Level Security (RLS)** a nivel de base de datos para aislar la información sensible:
+
+---
