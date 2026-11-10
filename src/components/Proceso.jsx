@@ -7,7 +7,7 @@ export const Proceso = () => {
     return (
         <section id="proceso" className="py-20">
             <div className="container-site">
-                <motion.div className="font-heading" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}  transition={{ duration: 0.6, ease: "easeOut" }}>
+                <motion.div className="font-heading" initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}  transition={{ duration: 0.6, ease: "easeOut" }}>
                    <p className="text-secondary uppercase tracking-[.12em] font-bold">Cómo trabajamos</p>
                    <p className="text-2xl font-extrabold max-w-sm">Un proceso claro y eficiente</p>
                 </motion.div>

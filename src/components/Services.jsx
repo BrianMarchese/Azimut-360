@@ -19,7 +19,7 @@ export const Services = () => {
     return (
         <section id="servicios" className="py-20 font-body ">
             <div className="container-site">
-                <motion.div className="font-heading" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}  transition={{ duration: 0.6, ease: "easeOut" }}>
+                <motion.div className="font-heading" initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}  transition={{ duration: 0.6, ease: "easeOut" }}>
                     <p className="text-secondary uppercase tracking-[.12em] font-bold">Servicios</p>
                     <h2 className="text-2xl font-extrabold max-w-sm">Soluciones integrales en agrimensura</h2>
                 </motion.div>
